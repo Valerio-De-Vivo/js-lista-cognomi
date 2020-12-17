@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  text-align: center;
+}
+
+#cognomi {
+  margin: auto;
+  height: 80vh;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  padding: 10px 30px;
+  background-color: white;
+  margin: 30px 0;
+  font-size: 2em;
+  border-radius: 20px;
+}
+
+#position {
+  font-size: 2em;
+  margin: 30px 0;
+  text-transform: uppercase;
+}

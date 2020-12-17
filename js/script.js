@@ -5,15 +5,13 @@
 
 
 
-// VAR NOME (PRIMA LETTERA MAIUSCOLA) 
+// VAR INPUT NOME (PRIMA LETTERA MAIUSCOLA) 
 
 var inputNome = prompt('Inserisci il tuo cognome');
 var primaLettera = inputNome.charAt(0).toUpperCase();
 var restoNome = inputNome.substring(1).toLowerCase();
 
 var cognome = primaLettera + restoNome;
-
-console.log(cognome);
 
 
 // ARRAY COGNOMI 
@@ -24,16 +22,24 @@ cognomi.push(cognome);
 
 // ORDINARE LISTA IN ORDINE ALFABETICO 
 
-var cognomiOrdinati = cognomi.sort();
+cognomi.sort();
 
-console.log(cognomiOrdinati);
 
 // POSIZIONE DEL COGNOME 
+
+
+var list = "<ul>";
 
 var posizioneCognome = cognome;
 
 for (i = 0; i < cognomi.length ; i++) {
+
     if (posizioneCognome == cognomi[i]) {
-        document.getElementById('position').innerHTML = 'Il tuo cognome è in ' + [i + 1] + ' posizione!';
+        document.getElementById('position').innerHTML = 'Il tuo cognome è in ' + [i + 1] + ' posizione ' + 'su un totale di ' + cognomi.length ;
     }
+    list += "<li>" + cognomi[i] + "</li>";
+    
 }
+list += "</ul>";
+
+document.getElementById("cognomi").innerHTML = list;
